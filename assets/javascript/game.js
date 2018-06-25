@@ -4,10 +4,6 @@
 /*        CSS changes based on theme choice,             */
 /*        questions are asked based on choice            */
 
-fetch("../themes/astro_words.txt")
-  .then( r => r.text() )
-  .then( t => console.log(t))
-
 // variable declarations
 
 var words = ['test','new'],   // list of words
@@ -16,6 +12,9 @@ var words = ['test','new'],   // list of words
   remaining = 10,             // # guesses
   guesses = [];               // letters guessed
   
+fetch("../themes/astro_words.txt")
+  .then( r => r.text() )
+  .then( t => console.log(t))
 
 // create Dictionary object for different themes
 function Dictionary(word, def) {
