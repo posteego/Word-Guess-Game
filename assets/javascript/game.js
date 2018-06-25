@@ -11,17 +11,19 @@ var words = ['test','new'],   // list of words
   wins = 0,                   // win counter
   remaining = 10,             // # guesses
   guesses = [];               // letters guessed
-  
-fetch("../themes/astro_words.txt")
-  .then( r => r.text() )
-  .then( t => console.log(t))
+
+function Game(theme) {
+  this.word = words; 
+};
 
 // create Dictionary object for different themes
 function Dictionary(word, def) {
-  this.word = word;
+  this.words = word;
   this.def = def;
+  this.define = function(index){
+    console.log(this.word[index]);
+  };
+  this.wordLength = function(word){
+    return word.length;
+  }
 }
-
-var astronomy = new Dictionary(words,def); // 'astronomy' list
-
-console.log(astronomy.word[1] + ' ' + astronomy.def[1]); // it works
