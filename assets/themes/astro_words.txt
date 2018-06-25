@@ -1,0 +1,40 @@
+Albedo
+Asteroid
+Astronomer
+Big Bang Theory
+Black Hole
+Cluster
+Comet
+Constellation
+Cosmic Rays
+Corona
+Dark Matter
+Doppler Shift
+Drake Equation
+Dwarf Planet
+Dwarf Star
+Eclipse
+Equinox
+Escape Velocity
+Event Horizon
+Exoplanet
+Gamma Ray
+Geosynchronous
+Gravity
+Hypernova
+Ice Giant
+Lagrange Points
+Lightyear
+Nebula
+Neutron Star
+Observatory
+Penumbra
+Pulsar
+Quasar
+Radiation
+Supernova
+Telemetry
+Umbra
+Vernal Equinox
+Wormhole
+Zenith
