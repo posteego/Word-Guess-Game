@@ -4,6 +4,10 @@
 /*        CSS changes based on theme choice,             */
 /*        questions are asked based on choice            */
 
+$("#playButton").click(function(){
+  $("#playButton").hide();
+});
+
 // variable declarations
 
 var words = ['test','new'],   // list of words
