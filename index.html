@@ -22,16 +22,18 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container jumboContainer">
       <div class="jumbotron mainJumbo bg-white">
-        <h1 id="title" class="text-center display-1 text-danger">Word Guess Game</h1>
+        <h1 class="text-center title display-2 text-danger">The Seventies</h1>
       </div>
+      <p id= "name" class="text-center"><b id="theme">A Hangman Game</b> by Kenneth Postigo</p>
     </div>
-    <div class="container btnContainer col-1 offset-col-5">
-      <button id ="playButton" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-backdrop="false" data-target="#chooseTopic">
+
+    <div class="container gameContainer col-1 mx-auto">
+      <button id ="playButton" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-backdrop="false" data-target="#choices">
         Play Now
       </button>
-      <div class="modal fade" id="chooseTopic" >
+      <div class="modal fade" id="choices">
         <div class="modal-dialog modal-dialog-centered ">
           <div class="modal-content">
             <div class="modal-header playModalHead">
@@ -40,14 +42,17 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body playModal">
-              <button type="button" id="astro" class="btn btn-danger btn-lg">Astronomy</button>
-              <button type="button" id="chem" class="btn btn-danger btn-lg">Chemistry</button>
+            <div class="modal-body playModalBody">
+              <button type="button" id="Science" class="btn game btn-danger btn-lg" data-dismiss="modal">Science</button>
+              <button type="button" id="Music" class="btn game btn-danger btn-lg" data-dismiss="modal">Music</button>
+              <button type="button" id="Movies" class="btn game btn-danger btn-lg" data-dismiss="modal">Movies</button>
+              <button type="button" id="Leaders" class="btn game btn-danger btn-lg" data-dismiss="modal">Leaders</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+
 
     <!-- Bootstrap Javascript -->
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
