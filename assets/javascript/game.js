@@ -34,29 +34,58 @@ $(".closeBtn").click(function(){
 // game
 
 function Game(theme) {
-  // get the correct word array
-  let word;
+  // set correct array + styles
+  let word, title, color, image;
   switch(theme) {
     case 'Science':
       word = sci;
+      title = "#000000"; // black
+      color = "#000000"; // black
+      image = 'url("assets/images/science/space.jpg")';
       break;
     case 'Music':
       word = music;
+      title = "#f0ed4a"; // yellow
+      color = "#f0ed4a"; // yellow
+      image = '';
       break;
     case 'Movies':
       word = movies;
+      title = "#ffffff"; // white
+      color = "#d83832"; // red
+      image = '';
       break;
     case 'Leaders':
       word = people;
+      title = "#ffffff"; // white
+      color = "#131a60"; // blue
+      image = 'url("assets/images/people/curtains.jpg")';
       break;
   }
+
   // call setup function to restyle page
-  setup(theme); 
+  setup(theme,title,color,image); 
 
 };
 
-function setup(theme){
+function setup(theme,color1,color2,image){
+  $("#theme").text(theme);
 
+  // for movies
+  if (theme === 'Movies') {
+    $(".title").css('background-color',color2);
+    $(".title").css('color',color1);
+
+  } else {
+    $(".title").css('background-color',color1);
+  }
+
+  $("body").css('background-color',color2);
+
+  // for science + leaders
+  if (image != ''){
+    $("body").css('background-image',image);
+  };
 };
 
 // clear modal, change css, run game when topic is chosen

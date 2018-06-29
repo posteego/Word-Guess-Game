@@ -1,3 +1,8 @@
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .jumboContainer {
   margin-bottom: 5%;
   padding:0;
@@ -13,12 +18,13 @@
   font-family: 'Shrikhand', cursive;
   padding: 0;
   margin: 0;
+  color: #dc3546;
 }
 
 #name {
   padding: 0;
   margin: 0;
-  color: #d5d3d3;
+  color: #cdcdcd;
 }
 
 .theme {
