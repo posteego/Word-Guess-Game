@@ -57,36 +57,43 @@ function Game(theme) {
       break;
     case 'Leaders':
       word = people;
-      title = "#ffffff"; // white
-      color = "#131a60"; // blue
-      image = 'url("assets/images/people/curtains.jpg")';
+      title = "#1A237E"; // black
+      color = "#1A237E"; // black
+      image = '';
       break;
   }
 
   // call setup function to restyle page
   setup(theme,title,color,image); 
 
+  
+
 };
 
-function setup(theme,color1,color2,image){
-  $("#theme").text(theme);
 
-  // for movies
+// set up page for game
+
+function setup(theme,color1,color2,image){
+  // label for theme
+  $("#theme").text(theme);
+  // color scheme for 'Seventies' title
   if (theme === 'Movies') {
     $(".title").css('background-color',color2);
     $(".title").css('color',color1);
-
   } else {
     $(".title").css('background-color',color1);
   }
-
+  // background color
   $("body").css('background-color',color2);
-
-  // for science + leaders
+  // background image for science
   if (image != ''){
     $("body").css('background-image',image);
   };
+
+  // shift title up!
+  $(".mainJumbo").animate({marginTop:"5%"});
 };
+
 
 // clear modal, change css, run game when topic is chosen
 
