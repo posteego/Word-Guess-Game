@@ -1,7 +1,28 @@
+.mainJumbo {
+  margin-top: 25%;
+}
+
 #title {
   font-family: 'Shrikhand', cursive;
 }
 
+.btnContainer {
+  padding: 0;       /* shifted padding, remove to center */
+  min-width: 130px; /* custom width for "play now" button */
+}
+
 #playButton {
   font-family: 'Shrikhand', cursive;
+}
+
+.playModalHead
+.closeBtn {
+  margin: 0;
+  padding: 0;
+}
+
+.playModal {
+  padding: 0;
+  margin: 5% auto;
+  min-width: 200px;
 }

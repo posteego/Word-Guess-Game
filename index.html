@@ -22,24 +22,27 @@
   </head>
 
   <body>
-    <div class="container my-5">
-      <div class="jumbotron bg-white">
+    <div class="container">
+      <div class="jumbotron mainJumbo bg-white">
         <h1 id="title" class="text-center display-1 text-danger">Word Guess Game</h1>
       </div>
     </div>
-    <div class="container col-sm-1 offset-col-5">
-      <button id ="playButton" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-backdrop="static" data-target="#chooseTopic">
+    <div class="container btnContainer col-1 offset-col-5">
+      <button id ="playButton" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-backdrop="false" data-target="#chooseTopic">
         Play Now
       </button>
       <div class="modal fade" id="chooseTopic" >
-        <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-dialog modal-dialog-centered ">
           <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header playModalHead">
               <h5 class="modal-title mx-auto">Choose a Topic!</h5>
+              <button type="button" class="close closeBtn" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-            <div class="modal-body row">
-              <button type="button" id="astro" class="btn btn-danger btn-lg col">Astronomy</button>
-              <button type="button" id="chem" class="btn btn-danger btn-lg col">Chemistry</button>
+            <div class="modal-body playModal">
+              <button type="button" id="astro" class="btn btn-danger btn-lg">Astronomy</button>
+              <button type="button" id="chem" class="btn btn-danger btn-lg">Chemistry</button>
             </div>
           </div>
         </div>
