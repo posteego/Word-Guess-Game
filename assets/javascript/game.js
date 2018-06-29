@@ -4,10 +4,6 @@
 /*        CSS changes based on theme choice,             */
 /*        questions are asked based on choice            */
 
-$("#playButton").click(function(){
-  $("#playButton").hide();
-});
-
 // variable declarations
 
 var words = ['test','new'],   // list of words
@@ -16,18 +12,20 @@ var words = ['test','new'],   // list of words
   remaining = 10,             // # guesses
   guesses = [];               // letters guessed
 
+
+// hide/show #playButton
+
+$("#playButton").click(function(){
+  $("#playButton").hide();
+});
+
+$(".closeBtn").click(function(){
+  $("#playButton").show();
+});
+
+
+// game
+
 function Game(theme) {
   this.word = words; 
 };
-
-// create Dictionary object for different themes
-function Dictionary(word, def) {
-  this.words = word;
-  this.def = def;
-  this.define = function(index){
-    console.log(this.word[index]);
-  };
-  this.wordLength = function(word){
-    return word.length;
-  }
-}
