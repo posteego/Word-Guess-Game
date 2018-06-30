@@ -26,8 +26,45 @@
       </div>
       <p id= "name" class="text-center"><b id="theme">A Hangman Game</b> by Kenneth Postigo</p>
     </div>
-    
-    <div class="container gameContainer mx-auto">
+
+    <div class="container gameContainer mx-auto text-center">
+
+      <div class="row gameDisplay p-4 shadow-lg rounded">
+        <div class="col-7 main">
+          <div class="instructions py-1 my-2 font-weight-light">
+            Press any key to play!
+          </div>
+          </br>
+          <div class="lead wordLabel my-2 font-weight-bold">
+            Current Word:
+          </div>
+          </br>
+          <div class="wordDisplay text-center font-weight-light">
+            <table cellpadding="3">
+              <tr id="word"></tr>
+            </table>
+          </div>
+          </br>
+          <div class="counters px-5 py-3 mx-5">
+              <dl>
+                <dt>Wins</dt><dd class="wins"></dd>
+                <dt>Guesses Remaining</dt><dd class="guesses"></dd>
+                <dt>Letters Guessed</dt><dd class="guessed"></dd>
+              </dl>
+          </div>
+        </div>
+        <div class="col-5 side">
+          </br>
+          </br>
+          <div class="wordImage">
+              IMAGE
+          </div>
+          <div class="answerDisplay">
+              ANSWER
+          </div>
+        </div>
+      </div>
+
       <button id ="playButton" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-backdrop="false" data-target="#choices">
         Play Now
       </button>

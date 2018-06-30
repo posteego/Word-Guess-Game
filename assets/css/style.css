@@ -40,9 +40,40 @@ body {
 
 .gameContainer {
   height: auto !important;
+  width: auto;
   padding: 0;       /* shifted padding, remove to center */
-  min-width: 130px; /* custom width for "play now" button */
-  max-width: 130px;
+}
+
+.gameDisplay,
+.main {
+  height: auto;
+}
+
+.wordDisplay {
+  font-size: 30px;
+}
+
+table {
+  margin: 0 auto;
+}
+
+dl {
+  width: 70%;
+  margin: 0 auto;
+}
+
+dt { 
+  display: block; 
+  float: left; 
+  text-align: right;
+}
+dt:after {
+  content: ':';
+}
+
+dd { 
+  display:block;
+  text-align: right;
 }
 
 #playButton {
