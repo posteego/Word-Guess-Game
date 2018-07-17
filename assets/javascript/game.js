@@ -55,8 +55,8 @@ function Game(theme) {
       break;
     case 'Music':
       word = music;
-      title = "#f0ed4a"; // yellow
-      color = "#f0ed4a"; // yellow
+      title = "#ffb347"; // orange
+      color = "#ffb347"; // orange
       image = '';
       break;
     case 'Movies':
@@ -111,6 +111,7 @@ function Game(theme) {
     };
     win = checkWord(newword);
     if (win === true){
+      $(document).off('keyup');
       printImage(word,index);
       wins++;
       prevword = newone;
@@ -128,21 +129,37 @@ function Game(theme) {
 
 
 function printImage(word, i) {
-  var newImage = document.createElement("img");
+  var newImage = $("<img>");
+  var img = "assets/images/";
   switch(word) {
     case sci:
-      newImage.setAttribute("src",i);
+      img += "science/" + i + ".jpg";
+      newImage.attr({
+        src:img, id:'pic', width: '300px', height: '200px'
+      });
       break;
     case music:
-      newImage.setAttribute("src",i);
+      img += "music/" + i + ".jpg";
+      newImage.attr({
+        src:img, id:'pic', width: '300px', height: '200px'
+      });
       break;
     case movies:
-      newImage.setAttribute("src",i);
+      img += "movies/" + i + ".jpg";
+      newImage.attr({
+        src:img, id:'pic', width: '300px', height: '200px'
+      });
       break;
     case people:
-      newImage.setAttribute("src",i);
+      img += "people/" + i + ".jpg";
+      newImage.attr({
+        src:img, id:'pic', width: '300px', height: '200px'
+      });
       break;
   }
+
+  $(".wordImage").append(newImage);
+  setTimeout(function(){$(".wordImage").empty()}, 2000);
 }
 
 
